@@ -1,0 +1,108 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* background: #e4b8d4;  */
+    overflow: hidden;
+    background: #f0c4e2; /* رنگ پس‌زمینه برای کل صفحه */
+}
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: transparent;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23fffff3"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2l1.47 4.39h4.77L14.49 9l1.47 4.39-3.88-2.83-3.88 2.83L9.51 9 5.76 6.39h4.77z"/></svg>');
+    animation: stars 3s infinite steps(5);
+   
+}
+
+@keyframes stars {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    20%, 80% {
+        transform: translateY(-10px);
+    }
+    40%, 60% {
+        transform: translateY(10px);
+    }
+}
+
+
+
+
+
+
+.calendar-container {
+    position: relative;
+    
+    padding: 38px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: url('b.jpg') no-repeat center center;
+    opacity: 1;
+}
+
+.calendar-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 10px; 
+    z-index: -1;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+}
+
+.calendar th, .calendar td {
+    padding: 18px;
+    text-align: center;
+    border: 1px solid #f5dde8;
+    background: rgba(242, 238, 241, 0.9); 
+}
+
+.calendar th {
+    background: rgba(243, 203, 228, 0.9); 
+    color: rgb(233, 147, 204);
+}
+
+.calendar td:hover {
+    background: rgb(248, 192, 235);
+    cursor: pointer;
+}
+#month-year{color: #e293c5;}
+#next{
+    color: #e293c5;
+    background-color: #f3d7e8;
+    border-color: #e5c1d8;
+}
+#prev{
+    color: #e293c5;
+    background-color: #f3d7e8;
+    border-color: #e5c1d8;
+}
+#calendar-body{
+    color: #ec77c1;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+}
